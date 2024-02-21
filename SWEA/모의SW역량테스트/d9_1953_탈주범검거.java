@@ -3,7 +3,7 @@ package a0220;
 import java.io.*;
 import java.util.*;
 
-public class Solution_d9_1953_탈주범검거 {
+public class d9_1953_탈주범검거 {
 	static int[] dx={-1,0,1,0}, dy= {0,1,0,-1};
 	// 0:상, 1:우, 2:하, 3:좌
 	static int[][] condition={{0},{0,1,2,3},{0,2},{1,3},{0,1},{2,1},{2,3},{0,3}};

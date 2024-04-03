@@ -1,39 +1,33 @@
-package a0403;
-
 import java.io.*;
 import java.util.*;
 
-public class d4_5643_키순서{
+public class G4_2458_키순서{
 	static int N;
 	static List<Integer>[][] upDown;
 	static boolean[] visited;
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
-		StringTokenizer st;
+		StringTokenizer st=new StringTokenizer(br.readLine(), " ");
 		
-		int M, temp1, temp2;
-		int T = Integer.parseInt(br.readLine());
-		for(int tc=1; tc<T+1; tc++){
-			N=Integer.parseInt(br.readLine());
-			M=Integer.parseInt(br.readLine());
-			upDown=new List[N][2];
-			for(int i=0; i<N; i++) for(int j=0; j<2; j++) upDown[i][j]=new ArrayList<>();
-			
-			for(int i=0; i<M; i++){
-				st=new StringTokenizer(br.readLine(), " ");
-				temp1=Integer.parseInt(st.nextToken())-1;
-				temp2=Integer.parseInt(st.nextToken())-1;
-				upDown[temp1][1].add(temp2);
-				upDown[temp2][0].add(temp1);
-			}
-			
-			int ans = 0;
-			for(int i=0; i<N; i++) if(isKnown(i)) ans += 1;
-			
-			sb.append("#").append(tc).append(" ").append(ans).append("\n");
+		N=Integer.parseInt(st.nextToken());
+		int M=Integer.parseInt(st.nextToken());
+		upDown=new List[N][2];
+		for(int i=0; i<N; i++) for(int j=0; j<2; j++) upDown[i][j]=new ArrayList<>();
+		
+		int temp1, temp2;
+		for(int i=0; i<M; i++){
+			st=new StringTokenizer(br.readLine(), " ");
+			temp1=Integer.parseInt(st.nextToken())-1;
+			temp2=Integer.parseInt(st.nextToken())-1;
+			upDown[temp1][1].add(temp2);
+			upDown[temp2][0].add(temp1);
 		}
-		System.out.println(sb.toString());
+		
+		int ans = 0;
+		for(int i=0; i<N; i++) if(isKnown(i)) ans += 1;
+		
+		System.out.println(ans);
 		br.close();
 	}
 	

@@ -1,3 +1,4 @@
+# 121,432 KB / 296 ms
 import sys
 import heapq as hq
 input = sys.stdin.readline

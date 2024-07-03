@@ -14,10 +14,12 @@ public class Main {
         while(!deq.isEmpty()){
             int currentNode = deq.poll();
             int neighbor=0;
+            // 현재 노드에 연결된 모든 이웃 노드를 탐색
             for(int isConnected:graph[currentNode]){
+                // 이웃 노드가 연결되어 있고 방문하지 않았다면
                 if(isConnected==1 && !visited[neighbor]){
-                    visited[neighbor] = true;
-                    deq.offer(neighbor);
+                    visited[neighbor] = true; // 이웃 노드를 방문한 것으로 표시
+                    deq.offer(neighbor); // 이웃 노드를 큐에 추가
                 }
                 neighbor++;
             }
@@ -44,9 +46,11 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         for(int i=0; i<M; i++) travelPlan[i] = Integer.parseInt(st.nextToken());
 
+        // 시작 도시 설정 (입력된 도시는 1부터 시작하므로 0부터 시작하도록 조정)
         int startCity = travelPlan[0] - 1;
         bfs(startCity);
 
+        // 모든 여행 경로에 대해 방문 가능 여부 확인
         boolean canTravel = true;
         for(int city:travelPlan){
             if(!visited[city - 1]){

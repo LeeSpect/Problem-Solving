@@ -1,3 +1,4 @@
+# 51.35 MB, 316 ms
 import sys
 from collections import defaultdict
 input = sys.stdin.readline

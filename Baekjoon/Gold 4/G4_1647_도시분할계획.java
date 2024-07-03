@@ -9,9 +9,7 @@ public class Main {
         int start, end, cost;
 
         public Node(int start, int end, int cost) {
-            this.start = start;
-            this.end = end;
-            this.cost = cost;
+            this.start = start; this.end = end; this.cost = cost;
         }
 
         @Override
@@ -32,8 +30,8 @@ public class Main {
         int a, b;
         a = find_parents(node1);
         b = find_parents(node2);
-        if(a==b) return false;
-        if(a<b) parents[b] = a;
+        if(a == b) return false;
+        if(a < b) parents[b] = a;
         else parents[a] = b;
         return true;
     }

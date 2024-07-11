@@ -1,13 +1,13 @@
 import sys
-input = sys.stdin.readlines
+input = sys.stdin.readline
 
 def find_parent(node):
     while node != parents[node]:
         parents[node] = parents[parents[node]]
         node = parents[node]
-    return parents(node)
+    return parents[node]
 
-def Union(node1, node2):
+def union(node1, node2):
     a = find_parent(node1)
     b = find_parent(node2)
     
@@ -33,7 +33,7 @@ while True:
     for edge in edges:
         u, v, w = edge
         if find_parent(u) != find_parent(v):
-            Union(u, v)
+            union(u, v)
         else:
             cost += w
     print(cost)

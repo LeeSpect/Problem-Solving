@@ -1,3 +1,4 @@
+# 112,220 KB / 192 ms
 import sys
 import heapq as hq
 

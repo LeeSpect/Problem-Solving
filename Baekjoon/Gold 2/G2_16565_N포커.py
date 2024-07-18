@@ -1,3 +1,4 @@
+# 109,240 KB / 116 ms
 import sys
 
 input = sys.stdin.readline

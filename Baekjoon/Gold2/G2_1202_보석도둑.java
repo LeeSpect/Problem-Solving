@@ -1,3 +1,5 @@
+package Baekjoon.Gold2;
+
 import java.io.*;
 import java.util.*;
 
@@ -10,7 +12,7 @@ import java.util.*;
 6. 4 ~ 5를 반복 
 */
  
-public class 보석{
+public class G2_1202_보석도둑 {
     public static void main(String[] args) throws Exception{
     	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
     	StringTokenizer st=new StringTokenizer(br.readLine(), " ");

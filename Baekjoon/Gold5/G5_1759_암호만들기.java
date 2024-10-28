@@ -1,4 +1,4 @@
-package a0221;
+package Baekjoon.Gold5;
 
 import java.io.*;
 import java.util.*;
@@ -22,7 +22,7 @@ public class G5_1759_암호만들기{
 		Arrays.sort(alphaArray);
 		ansArray = new char[L];
 		visited = new boolean[C];
-		solve(0, 0);		
+		solve(0, 0);
 		
 		System.out.println(sb.toString());
 		br.close();

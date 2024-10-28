@@ -1,5 +1,3 @@
-package a0221;
-
 import java.io.*;
 import java.util.*;
 
@@ -24,7 +22,7 @@ public class G5_1911_흙길보수하기 {
 		}
 
 		// 정렬해도 상관 없다. 입력에서 물웅덩이 위치가 겹치는 범위는 없으므로
-		Arrays.sort(waters); // 오름차순 정렬
+		Arrays.sort(waters); // 오름차순 정렬 -> 웅덩이를 객체로 만들고 pq로 정렬해도 된다.
 
 		// 널빤지의 가장 마지막 위치를 기억한다.
 		int lastIdx = 0; // 널빤지의 가장 마지막 위치

@@ -1,4 +1,4 @@
-package a0422;
+package Baekjoon.Gold2;
 
 import java.io.*;
 import java.util.*;

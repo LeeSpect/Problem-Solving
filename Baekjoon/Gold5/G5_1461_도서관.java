@@ -1,3 +1,5 @@
+// 11668KB, 72ms
+
 package Baekjoon.Gold5;
 
 import java.util.*;

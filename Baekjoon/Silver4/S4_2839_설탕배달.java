@@ -1,7 +1,6 @@
-package a0213;
+package Baekjoon.Silver4;
 
 import java.io.*;
-import java.util.*;
 
 public class S4_2839_설탕배달 {
 	public static void main(String[] args) throws Exception{
